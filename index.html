@@ -196,13 +196,13 @@ function avatar(id){
     hair='<path d="M15 31c0-11 7-17 17-17s17 6 17 17c-5-2-10-7-12-11-4 6-13 10-22 11z" fill="#5B3424"/>';
     extra='<circle cx="17.5" cy="41" r="2" fill="#E0A82E"/><circle cx="46.5" cy="41" r="2" fill="#E0A82E"/>';
   }
-  if(id==='franco'){
+  if(id==='lukas'){
     body='<path d="M10 64c2-11 10-15 22-15s20 4 22 15z" fill="#6E96CE"/><path d="M27 49l5 7 5-7z" fill="#DCE7F5"/>';
     hair='<path d="M16 30c-2-11 5-18 16-18 9 0 17 5 16 18-2-5-4-8-6-8 1-2 0-4-1-5-2 3-6 4-11 3-3 0-6 1-8 4-3 1-5 3-6 6z" fill="#3A2A20"/>';
     extra='<path d="M18 36c1 9 7 14 14 14s13-5 14-14c-1 3-3 5-5 5-2-2-5-3-9-3s-7 1-9 3c-2 0-4-2-5-5z" fill="#3A2A20" opacity=".9"/><path d="M27 43q5 3 10 0" stroke="#F2E2D6" stroke-width="2" fill="none" stroke-linecap="round"/>';
   }
   const face = `<path d="M32 15c-9 0-15 7-15 17 0 10 6.5 17 15 17s15-7 15-17c0-10-6-17-15-17z" fill="${skin}"/><ellipse cx="17" cy="34" rx="2.5" ry="3.5" fill="${skin}"/><ellipse cx="47" cy="34" rx="2.5" ry="3.5" fill="${skin}"/>`;
-  const mouth = id==='franco' ? '' : smile;
+  const mouth = id==='lukas' ? '' : smile;
   return `<svg viewBox="0 0 64 64" aria-hidden="true"><defs><clipPath id="c-${id}-${Math.random().toString(36).slice(2,7)}"><circle cx="32" cy="32" r="32"/></clipPath></defs><circle cx="32" cy="32" r="32" fill="${bgc}"/><g>${back}${body}${face}${hair}${eyes}${cheeks}${extra}${mouth}</g><circle cx="32" cy="32" r="30.5" fill="none" stroke="#FFFFFF" stroke-width="3"/></svg>`;
 }
 
