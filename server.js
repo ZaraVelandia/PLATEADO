@@ -14,7 +14,7 @@ if (!API_KEY) {
 
 const app = express();
 app.use(express.json({ limit: "64kb" }));
-app.use(express.static(path.join(path.dirname(fileURLToPath(import.meta.url)), "public")));
+   app.get("/", (req, res) => res.sendFile(path.join(path.dirname(fileURLToPath(import.meta.url)), "index.html")));
 
 // Límite simple: 20 mensajes por minuto por IP, para cuidar tu presupuesto de API.
 const hits = new Map();
